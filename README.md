@@ -195,7 +195,7 @@ python scripts/evaluate.py   --config configs/eurostat.yaml   --checkpoint outpu
 
 ---
 
-## Lead–lag diagnostics
+## Lead-lag diagnostics
 
 ```bash
 python scripts/compute_lead_lag.py   --input data/processed/yelp_monthly.parquet   --unit_col city   --date_col month   --x_col density   --y_col crowding
