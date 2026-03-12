@@ -1,4 +1,4 @@
-# PATT: Patch-Agnostic Temporal Transformer for Tourism–Culture Forecasting
+# PATT: Patch-Agnostic Temporal Transformer for Tourism
 
 This repository Contains the implementation of the paper **“AI-Driven Insights into the Impact of Tourism on Local Cultures: A Machine Learning Approach”**.
 
