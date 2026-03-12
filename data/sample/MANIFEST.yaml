@@ -1,0 +1,28 @@
+version: 1
+kind: synthetic-sample-bundle
+purpose: >-
+  Minimal synthetic files that mirror the repository's expected raw-data layouts
+  without redistributing third-party source datasets.
+license_note: >-
+  These sample files are synthetic and included only for testing repository I/O.
+files:
+  - path: raw/eurostat_sample.csv
+    description: Toy Eurostat-style region-month tourism panel
+    format: csv
+    synthetic: true
+  - path: raw/inside_airbnb/amsterdam/listings_2024-01.csv
+    description: Toy Inside Airbnb snapshot for one city-month
+    format: csv
+    synthetic: true
+  - path: raw/yelp/yelp_academic_dataset_business.json
+    description: Toy Yelp business JSON-lines file
+    format: jsonl
+    synthetic: true
+  - path: raw/yelp/yelp_academic_dataset_review.json
+    description: Toy Yelp review JSON-lines file
+    format: jsonl
+    synthetic: true
+  - path: city_region_map_sample.csv
+    description: Example city to region concordance used for optional mapped covariates
+    format: csv
+    synthetic: true
