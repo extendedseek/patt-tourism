@@ -23,6 +23,4 @@ data/
 ```
 
 Notes:
-- `data/sample/` contains **synthetic example files** for schema inspection and smoke testing.
-- The repository does **not** redistribute the full third-party datasets.
 - Processed parquet files created by the scripts are the inputs used by the training configs.
