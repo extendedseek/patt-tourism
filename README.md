@@ -69,6 +69,25 @@ patt-tourism/
    └── utils/
 ```
 
+
+---
+
+## Mapping paper sections to code
+
+| Paper component | Main files |
+|---|---|
+| Data-to-model interface | `src/patt/data/panel_builder.py`, `src/patt/data/dataset.py` |
+| RevIN | `src/patt/models/revin.py` |
+| LPU | `src/patt/models/lpu.py` |
+| Offset-guided sparse attention | `src/patt/models/ogsa.py` |
+| ConvFFN | `src/patt/models/convffn.py` |
+| Hierarchical encoder | `src/patt/models/encoder.py` |
+| PATT model | `src/patt/models/patt.py` |
+| Metrics | `src/patt/evaluation/metrics.py` |
+| Rolling-window training | `src/patt/training/engine.py`, `scripts/train.py` |
+| Evaluation | `scripts/evaluate.py` |
+| Lead–lag analysis | `scripts/compute_lead_lag.py` |
+| Ablations | `scripts/run_ablation.py`, `configs/ablations/` |
 ---
 
 ## Installation
@@ -197,20 +216,3 @@ python scripts/run_ablation.py --config configs/ablations/offset_modes.yaml
 ```
 
 ---
-
-## Mapping paper sections to code
-
-| Paper component | Main files |
-|---|---|
-| Data-to-model interface | `src/patt/data/panel_builder.py`, `src/patt/data/dataset.py` |
-| RevIN | `src/patt/models/revin.py` |
-| LPU | `src/patt/models/lpu.py` |
-| Offset-guided sparse attention | `src/patt/models/ogsa.py` |
-| ConvFFN | `src/patt/models/convffn.py` |
-| Hierarchical encoder | `src/patt/models/encoder.py` |
-| PATT model | `src/patt/models/patt.py` |
-| Metrics | `src/patt/evaluation/metrics.py` |
-| Rolling-window training | `src/patt/training/engine.py`, `scripts/train.py` |
-| Evaluation | `scripts/evaluate.py` |
-| Lead–lag analysis | `scripts/compute_lead_lag.py` |
-| Ablations | `scripts/run_ablation.py`, `configs/ablations/` |
