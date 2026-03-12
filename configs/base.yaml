@@ -1,0 +1,50 @@
+seed: 42
+output_dir: outputs/default
+
+data:
+  parquet_path: data/processed/placeholder.parquet
+  date_col: month
+  unit_col: unit_id
+  target_col: target_value
+  feature_cols: []
+  exogenous_cols: []
+  mask_cols: []
+  input_length: 96
+  horizon: 12
+  seasonal_period: 12
+  stride: 1
+  add_mask_channels: true
+  train_ratio: 0.7
+  val_ratio: 0.15
+  min_history: 24
+
+model:
+  d_model: 64
+  num_blocks: 4
+  num_heads: 8
+  ff_expand: 4
+  dropout: 0.1
+  num_samples: 12
+  anchor_rho: 2
+  use_lpu: true
+  use_convffn: true
+  attention_mode: sparse
+  offset_mode: learned
+  patch_size: 1
+  patch_threshold_384: 4
+  patch_threshold_768: 8
+  max_offset: 6.0
+  kernel_size: 3
+  downsample_between_blocks: true
+  probabilistic: true
+
+train:
+  epochs: 50
+  batch_size: 32
+  lr: 0.0003
+  weight_decay: 0.0001
+  warmup_ratio: 0.05
+  patience: 10
+  grad_clip: 1.0
+  amp: true
+  num_workers: 0
