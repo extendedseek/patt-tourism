@@ -64,7 +64,7 @@ So this repo should be understood as:
 ## Repository layout
 
 ```text
-patt-tourism-repo/
+patt-tourism/
 ├── CITATION.cff
 ├── configs/
 │   ├── base.yaml
@@ -75,16 +75,14 @@ patt-tourism-repo/
 ├── data/
 │   ├── README.md
 │   └── sample/
-├── outputs/
 ├── scripts/
 ├── src/patt/
-│   ├── baselines/
-│   ├── data/
-│   ├── evaluation/
-│   ├── models/
-│   ├── training/
-│   └── utils/
-└── tests/
+   ├── baselines/
+   ├── data/
+   ├── evaluation/
+   ├── models/
+   ├── training/
+   └── utils/
 ```
 
 ---
@@ -167,31 +165,6 @@ python scripts/prepare_yelp.py   --input_dir data/raw/yelp   --airbnb_panel data
 
 ---
 
-## Quickstart with the included synthetic sample
-
-The repository now includes a **tiny synthetic sample bundle** in `data/sample/` so that new users can inspect file formats without redistributing third-party datasets.
-
-Sample contents include:
-- a toy Eurostat-style region-month CSV,
-- a toy Inside Airbnb city snapshot,
-- toy Yelp business and review JSONL files,
-- a sample city-to-region mapping, and
-- a manifest describing each file.
-
-Example preprocessing commands:
-
-```bash
-python scripts/prepare_eurostat.py   --input data/sample/raw/eurostat_sample.csv   --output data/sample/processed/eurostat_monthly.parquet
-
-python scripts/prepare_airbnb.py   --input_dir data/sample/raw/inside_airbnb   --eurostat_panel data/sample/processed/eurostat_monthly.parquet   --city_region_map data/sample/city_region_map_sample.csv   --output data/sample/processed/airbnb_monthly.parquet
-
-python scripts/prepare_yelp.py   --input_dir data/sample/raw/yelp   --airbnb_panel data/sample/processed/airbnb_monthly.parquet   --eurostat_panel data/sample/processed/eurostat_monthly.parquet   --city_region_map data/sample/city_region_map_sample.csv   --output data/sample/processed/yelp_monthly.parquet
-```
-
-The sample files are **illustrative only** and are not intended for model quality claims.
-
----
-
 ## Training
 
 ### Eurostat
@@ -257,21 +230,3 @@ python scripts/run_ablation.py --config configs/ablations/offset_modes.yaml
 | Evaluation | `scripts/evaluate.py` |
 | Lead–lag analysis | `scripts/compute_lead_lag.py` |
 | Ablations | `scripts/run_ablation.py`, `configs/ablations/` |
-
----
-
-## Public release checklist
-
-Before publishing this as a final GitHub repository, update:
-- repository owner / URL fields,
-- real author names and ORCIDs in `CITATION.cff`,
-- release tag and version number,
-- paper DOI / journal metadata if the article is published,
-- exact city lists and concordance tables used in the final study,
-- any task-specific lexical resources used for the Yelp indices.
-
----
-
-## Citation
-
-A root-level `CITATION.cff` file is included so GitHub can expose a **“Cite this repository”** entry for the software release. Update its maintainer and publication metadata before the public release if you want the repository to cite a paper instead of the software artifact.
