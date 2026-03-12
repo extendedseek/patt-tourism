@@ -1,0 +1,6 @@
+inherits: configs/airbnb.yaml
+ablation:
+  sweep_name: dense_vs_sparse
+  overrides:
+    - {model: {attention_mode: dense}}
+    - {model: {attention_mode: sparse, offset_mode: learned}}

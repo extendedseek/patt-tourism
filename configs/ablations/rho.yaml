@@ -1,0 +1,8 @@
+inherits: configs/eurostat.yaml
+ablation:
+  sweep_name: rho
+  overrides:
+    - {model: {anchor_rho: 1}}
+    - {model: {anchor_rho: 2}}
+    - {model: {anchor_rho: 4}}
+    - {model: {anchor_rho: 8}}

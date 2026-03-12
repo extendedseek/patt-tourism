@@ -1,0 +1,6 @@
+inherits: configs/yelp.yaml
+ablation:
+  sweep_name: lpu
+  overrides:
+    - {model: {use_lpu: false}}
+    - {model: {use_lpu: true}}

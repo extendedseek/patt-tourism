@@ -1,0 +1,9 @@
+inherits: configs/airbnb.yaml
+ablation:
+  sweep_name: sparsity_R
+  overrides:
+    - {model: {num_samples: 4}}
+    - {model: {num_samples: 8}}
+    - {model: {num_samples: 12}}
+    - {model: {num_samples: 16}}
+    - {model: {num_samples: 24}}

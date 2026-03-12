@@ -1,0 +1,7 @@
+inherits: configs/airbnb.yaml
+ablation:
+  sweep_name: offsets
+  overrides:
+    - {model: {offset_mode: fixed}}
+    - {model: {offset_mode: random}}
+    - {model: {offset_mode: learned}}
