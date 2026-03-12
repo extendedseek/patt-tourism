@@ -1,6 +1,6 @@
 # PATT: Patch-Agnostic Temporal Transformer for Tourism–Culture Forecasting
 
-This repository packages the paper **“AI-Driven Insights into the Impact of Tourism on Local Cultures: A Machine Learning Approach”** as a modular research codebase.
+This repository Contains the implementation of the paper **“AI-Driven Insights into the Impact of Tourism on Local Cultures: A Machine Learning Approach”**.
 
 It implements the paper’s forecasting pipeline around three public data sources:
 - **Eurostat `tour_occ_nin2`** for regional tourism pressure,
@@ -10,10 +10,10 @@ It implements the paper’s forecasting pipeline around three public data source
 The repository is organized to support:
 - monthly panel construction,
 - rolling-window forecasting,
-- the **Patch-Agnostic Temporal Transformer (PATT)**,
+- the Patch-Agnostic Temporal Transformer (PATT),
 - uncertainty-aware evaluation,
 - lead–lag diagnostics, and
-- ablation studies for the core architectural claims.
+- ablation studies.
 
 ---
 
@@ -42,22 +42,6 @@ The repository is organized to support:
 - **lagged cross-modal correlation** (`r_max`, `tau*`-style analysis)
 - **attention entropy** for temporal selectivity
 - ablation switches for dense vs sparse attention, offset modes, `R`, `rho`, LPU, and ConvFFN
-
----
-
-## Reproducibility boundary
-
-This repository is designed to be **faithful to the paper’s method and experiment structure**, but the manuscript still leaves several dataset-specific choices open. In particular, exact one-to-one reproduction would still require the final paper authors to lock down:
-- the exact city list used in each panel,
-- the final city-to-NUTS concordance table,
-- the exact review lexicon / prompting recipe for the Yelp-derived indices,
-- the exact holiday / event indicator tables,
-- the final inclusion and filtering rules for all panels.
-
-So this repo should be understood as:
-- a **complete implementation of the architecture and experiment engine**,
-- a **plausible, paper-aligned preprocessing pipeline**, and
-- a **public release skeleton ready for GitHub**.
 
 ---
 
