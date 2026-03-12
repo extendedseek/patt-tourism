@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the software release below. Replace the maintainer metadata with the final author list before public release if needed."
-title: "PATT: Patch-Agnostic Temporal Transformer for Tourism–Culture Forecasting"
+title: "PATT: Patch-Agnostic Temporal Transformer for Tourism"
 type: software
 version: 0.1.0
 date-released: 2026-03-12
